@@ -53,3 +53,4 @@ output PDF should look exactly like this pdf:
 
 https://www.scapefox.com/cgi-bin/wkconvert.cgi?infile=/tmp/infile.html&outfile=/tmp/outfile.pdf
 </details>
+Unfortunately, the guys failed to set correct encoding for their sample `input.html`. It should be ISO-8859-1.
