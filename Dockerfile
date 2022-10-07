@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update -q && \
-    apt install -y nano lighttpd lighttpd-doc libcgi-pm-perl wget perl && \
+    apt install -y lighttpd lighttpd-doc libcgi-pm-perl wget perl && \
     wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb && \
     apt install -y ./wkhtmltox_0.12.6-1.focal_amd64.deb && \
     rm -rf ./wkhtmltox_0.12.6-1.focal_amd64.deb && \
