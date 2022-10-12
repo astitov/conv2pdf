@@ -10,11 +10,13 @@ Clone the repo and run `docker build` against `Dockerfile`.
 
 Start container `docker run -p 80:80 [-v /host/dir:/container/dir:Z] -d image_name`.
 
-In browser open `http://localhost:80/cgi_bin/wk_convert.cgi?infile=[input_file]&outfile=[output_file]`.
+In browser open `http://localhost:80/cgi_bin/wk_convert.cgi?infile=[input_file]&outfile=[output_file]&encoding=[encoding]`.
 
 `input_file` -- an HTML page (local file or a URL) to be rendered to PDF.
 
 `output_file` -- a resulting PDF written on disk and rendered in browser.
+
+`encoding` -- encoding of the input file (UTF-8 by default).
 
 
 ## Misc
