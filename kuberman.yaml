@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: conv2pdf-deploy
+spec:
+  selector:
+    matchLabels:
+      app: c2pdf
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:c2pdf
+    spec:
+      containers:
+      - name: c2pdf
+        image: c2pdf:1.0
+        ports:
+        - containerPort: 80
