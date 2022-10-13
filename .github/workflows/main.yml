@@ -21,3 +21,11 @@ jobs:
         VALIDATE_ALL_CODEBASE: true
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build no push
+      uses: docker/build-push-action@v3
+      with:
+        push: false
+        tags: user/c2pdf:latest

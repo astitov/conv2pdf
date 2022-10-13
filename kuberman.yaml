@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: conv2pdf-deploy
+  name: conv2pdf-depl
 spec:
   selector:
     matchLabels:
@@ -11,10 +11,10 @@ spec:
   template:
     metadata:
       labels:
-        app:c2pdf
+        app: c2pdf
     spec:
       containers:
-      - name: c2pdf
-        image: c2pdf:1.0
-        ports:
+      - name  : c2pdf
+        image : c2pdf:1.0
+        ports :
         - containerPort: 80
