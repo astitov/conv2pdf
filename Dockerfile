@@ -9,7 +9,7 @@ RUN apt update -q && \
     lighttpd-enable-mod cgi && \
     service lighttpd stop
 
-COPY  wk_convert.cgi  /usr/lib/cgi-bin/wk_convert.cgi
+COPY  files/wk_convert.cgi  /usr/lib/cgi-bin/wk_convert.cgi
 
 EXPOSE 80
 

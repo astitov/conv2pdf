@@ -14,9 +14,9 @@ In browser open `http://localhost:80/cgi_bin/wk_convert.cgi?infile=[input_file]&
 
 `input_file` -- an HTML page (local file or a URL) to be rendered to PDF.
 
-`output_file` -- a resulting PDF written on disk and rendered in browser.
+`output_file` -- (optional) a resulting PDF written on disk and rendered in browser.
 
-`encoding` -- encoding of the input file (UTF-8 by default).
+`encoding` -- (optional) encoding of the input file (UTF-8 by default).
 
 
 ## Misc
@@ -56,4 +56,4 @@ output PDF should look exactly like this pdf:
 https://www.scapefox.com/cgi-bin/wkconvert.cgi?infile=/tmp/infile.html&outfile=/tmp/outfile.pdf
 </details>
 
-Unfortunately, the guys failed to set correct encoding and font for their sample `input.html`. It should be ISO-8859-1 and e.g. Noto on Linux. `infile.html` in this repo is patched for correct conversion on Centos 8 and friends. 
+Unfortunately, the guys failed to set correct encoding and font for their sample `input.html`. It should be ISO-8859-1 and e.g. Noto on Linux. `infile.html` in this repo is patched for correct conversion on Centos 8 and friends.
