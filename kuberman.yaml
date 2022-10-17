@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 
@@ -7,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: c2pdf
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -15,6 +16,6 @@ spec:
     spec:
       containers:
       - name  : c2pdf
-        image : c2pdf:1.0
+        image : astitov/c2pdf:1.0
         ports :
         - containerPort: 80
