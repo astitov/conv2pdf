@@ -23,7 +23,7 @@ spec:
         - containerPort: 80
 
 ---
-apiVersion: autoscaling/v1
+apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: c2pdf-scaler
