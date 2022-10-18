@@ -1,7 +1,6 @@
 ---
 apiVersion: apps/v1
 kind: Deployment
-
 metadata:
   name: conv2pdf-depl
   labels:
@@ -29,7 +28,7 @@ metadata:
   name: c2pdf-scaler
 spec:
   scaleTargetRef:
-    apiVersion: apps/v2beta1v1
+    apiVersion: apps/v1
     kind: Deployment
     name: conv2pdf-depl
   minReplicas: 2
