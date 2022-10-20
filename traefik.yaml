@@ -75,5 +75,5 @@ spec:
           containerPort: 8080
         args:
         - --api
+        - --logLevel=DEBUG
         - --kubernetes
-        - --logLevel=INFO
