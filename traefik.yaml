@@ -52,7 +52,7 @@ metadata:
   namespace: kube-system
   labels:
     app: traefik-ingress-lb
-specs:
+spec:
   replicas: 1
   selector:
     matchLabels:
