@@ -76,4 +76,4 @@ spec:
         args:
         - --api
         - --logLevel=DEBUG
-        - --kubernetes
+        - --providers.kubernetes
