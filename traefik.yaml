@@ -66,7 +66,7 @@ spec:
       serviceAccountName: traefik-ingress
       terminationGracePeriodSeconds: 30
       containers:
-      - image: traefik
+      - image: traefik:latest
         name: traefik-ingress-lb
         ports:
         - name: http
@@ -75,5 +75,9 @@ spec:
           containerPort: 8080
         args:
         - --api
-        - --logLevel=DEBUG
-        - --providers.kubernetes
+        - --api.insecure
+        - --log.level=DEBUG
+        - --providers.kubernetescrd=true
+        - --providers.kubernetesingress=true
+        - --entryPoints.traefik.address=:8080
+        - --entryPoints.web.address=:80
